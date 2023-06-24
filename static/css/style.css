@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+@media only screen and (max-width: 1000px) {
+    .container2 {
+        display: none;
+    }
+
+    .container1 {
+        width: 100% !important;
+    }
+
+    nav .sidenav-trigger i {
+        font-size: 300% !important;
+    }
+}
+
+body {
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Roboto', sans-serif;
+    background-color: #d6d2d2;
+}
+
+.container1 {
+    width: 80%;
+}
+
+.container2 {
+    width: 19%;
+}
+
+nav {
+    background-color: white !important;
+}
+
+nav img {
+    width: 200px;
+}
+
+nav ul {
+    margin-left: 19% !important;
+}
+
+nav a {
+    color: black !important;
+}
+
+nav ul li a {
+    display: flex !important;
+    padding: 0 5px !important;
+}
+
+nav ul li i {
+    font-size: 21px !important;
+    padding-left: 2px !important;
+}
+
+.slider {
+    height: 640px !important;
+    background-color: white;
+
+}
+
+.slides {
+    height: 600px !important;
+}
+
+.indicator-item.active {
+    background-color: #0098D2 !important;
+}
+
+.intro ,.price, .site, .amenities, .gallery, .address{
+    background-color: white;
+    padding: 3%;
+    margin-top: 1%;
+}
+
+.intro h1 {
+    color: #0098D2;
+    font-size: 32px;
+    line-height: 38px;
+    font-weight: 500;
+    text-align: left
+}
+
+.intro a,.price a ,.site a, .amenities a, .gallery a,.map2 a{
+    background-color: #0098D2 !important;
+}
+
+.price h2, .site h2 ,.amenities h2, .gallery h2, .address h2{
+    color: #0098D2;
+    font-size: 26px;
+    line-height: 39px;
+    font-weight: 400;
+    text-align: left;
+}
+.price table td a{
+    margin-left: 5%;
+}
+.price-components{
+    display: flex;
+    justify-content: space-between;
+}
+.comp1{
+    width: 60%;
+}
+.comp2{
+    width: 39%;
+}
+.image-box{
+    background-color: #0098D2;
+    width: 320px;
+}
+.comp2 h5{
+    color: white;
+    text-align: center;
+    padding-bottom: 5%;
+    margin: 0;
+}
+.site h5{
+    text-align: center;
+}
+.button-container{
+    display: flex;
+    justify-content: center;
+    margin-top: 5%;
+}
+.gallery-box{
+    display: flex;
+    justify-content: space-between;
+}
+.maps{
+    display: flex;
+    justify-content: space-between;
+}
+.map1{
+    width: 59%;
+}
+.map2{
+    width: 39%;
+}
+.map1 iframe{
+    width: 100%;
+}
+.address table{
+    margin-top: 3%;
+}
