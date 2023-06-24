@@ -5,28 +5,33 @@
         display: none;
     }
 
-    .container1 {
+    .container1, nav {
         width: 100% !important;
     }
 
     nav .sidenav-trigger i {
         font-size: 300% !important;
     }
-    .price-components,.maps{
+
+    .price-components, .maps {
         display: block !important;
     }
-    .comp1,.comp2, .map1,.map2{
+
+    .comp1, .comp2, .map1, .map2 {
         width: 100% !important;
         margin-top: 3% !important;
     }
-    .price td,th{
+
+    .price td, th {
         text-align: center !important;
     }
-    .comp2{
+
+    .comp2 {
         display: flex;
         justify-content: center;
     }
-    .amenities .indicator-item{
+
+    .amenities .indicator-item {
         display: none !important;
     }
 }
@@ -44,6 +49,11 @@ body {
 
 .container2 {
     width: 19%;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    height: -webkit-fill-available;
+    background-color: #fff;
 }
 
 nav {
@@ -55,7 +65,7 @@ nav img {
 }
 
 nav ul {
-    margin-left: 19% !important;
+    margin-left: 22% !important;
 }
 
 nav a {
@@ -64,7 +74,7 @@ nav a {
 
 nav ul li a {
     display: flex !important;
-    padding: 0 5px !important;
+    padding: 0 7px !important;
 }
 
 nav ul li i {
@@ -86,7 +96,7 @@ nav ul li i {
     background-color: #0098D2 !important;
 }
 
-.intro ,.price, .site, .amenities, .gallery, .address, .tour, .about{
+.intro, .price, .site, .amenities, .gallery, .address, .tour, .about {
     background-color: white;
     padding: 3%;
     margin-top: 1%;
@@ -100,91 +110,133 @@ nav ul li i {
     text-align: left
 }
 
-.intro a,.price a ,.site a, .amenities a, .gallery a,.map2 a{
+.intro a, .price a, .site a, .amenities a, .gallery a, .map2 a, .container2 .button-container a {
     background-color: #0098D2 !important;
 }
 
-.price h2, .site h2 ,.amenities h2, .gallery h2, .address h2, .tour h2{
+.price h2, .site h2, .amenities h2, .gallery h2, .address h2, .tour h2 {
     color: #0098D2;
     font-size: 26px;
     line-height: 39px;
     font-weight: 400;
     text-align: left;
 }
-.price table td a{
+
+.price table td a {
     margin-left: 5%;
 }
-.price-components{
+
+.price-components {
     display: flex;
     justify-content: space-between;
 }
-.comp1{
+
+.comp1 {
     width: 60%;
 }
-.comp2{
+
+.comp2 {
     width: 39%;
 }
-.image-box{
+
+.image-box {
     background-color: #0098D2;
     width: 320px;
 }
-.comp2 h5{
+
+.comp2 h5 {
     color: white;
     text-align: center;
     padding-bottom: 5%;
     margin: 0;
 }
-.site h5{
+
+.site h5 {
     text-align: center;
 }
-.button-container{
+
+.button-container {
     display: flex;
     justify-content: center;
     margin-top: 5%;
 }
-.gallery-box{
+
+.gallery-box {
     display: flex;
     justify-content: space-between;
 }
-.maps{
+
+.maps {
     display: flex;
     justify-content: space-between;
 }
-.map1{
+
+.map1 {
     width: 59%;
 }
-.map2{
+
+.map2 {
     width: 39%;
 }
-.map1 iframe{
+
+.map1 iframe {
     width: 100%;
 }
-.address table{
+
+.address table {
     margin-top: 3%;
 }
-.tour .slider div{
+
+.tour .slider div {
     background-color: black;
     opacity: 0.8 !important;
     padding-bottom: 4%;
 }
-.tour .slider div .large{
+
+.tour .slider div .large {
     font-size: 10rem;
-    margin-top:4%
+    margin-top: 4%
 }
-.tour .indicator-item{
+
+.tour .indicator-item {
     display: none !important;
 }
+
 .center {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 25%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 25%;
 }
-.disc{
+
+.disc {
     background-color: #e1dfdf;
     padding: 3%;
     margin-top: 1%;
 }
-.disc p{
+
+.disc p {
     color: #313131;
+}
+
+.container2 .row a {
+    background-color: black;
+    color: white;
+    padding: 8px;
+}
+.container2 h6{
+    text-align: center;
+    margin-top: 25%;
+}
+input[type=text]:not(.browser-default):focus:not([readonly]),
+input[type=email]:not(.browser-default):focus:not([readonly]),
+input[type=tel]:not(.browser-default):focus:not([readonly]){
+    border-bottom: #0098D2 !important;
+    box-shadow: 0 1px 0 0 #0098D2 !important;
+}
+
+input[type=text]:not(.browser-default):focus:not([readonly])+label,
+input[type=email]:not(.browser-default):focus:not([readonly])+label,
+input[type=tel]:not(.browser-default):focus:not([readonly])+label {
+    color: #0098D2 !important;
 }
