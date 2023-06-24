@@ -12,6 +12,23 @@
     nav .sidenav-trigger i {
         font-size: 300% !important;
     }
+    .price-components,.maps{
+        display: block !important;
+    }
+    .comp1,.comp2, .map1,.map2{
+        width: 100% !important;
+        margin-top: 3% !important;
+    }
+    .price td,th{
+        text-align: center !important;
+    }
+    .comp2{
+        display: flex;
+        justify-content: center;
+    }
+    .amenities .indicator-item{
+        display: none !important;
+    }
 }
 
 body {
@@ -69,7 +86,7 @@ nav ul li i {
     background-color: #0098D2 !important;
 }
 
-.intro ,.price, .site, .amenities, .gallery, .address{
+.intro ,.price, .site, .amenities, .gallery, .address, .tour, .about{
     background-color: white;
     padding: 3%;
     margin-top: 1%;
@@ -87,7 +104,7 @@ nav ul li i {
     background-color: #0098D2 !important;
 }
 
-.price h2, .site h2 ,.amenities h2, .gallery h2, .address h2{
+.price h2, .site h2 ,.amenities h2, .gallery h2, .address h2, .tour h2{
     color: #0098D2;
     font-size: 26px;
     line-height: 39px;
@@ -144,4 +161,30 @@ nav ul li i {
 }
 .address table{
     margin-top: 3%;
+}
+.tour .slider div{
+    background-color: black;
+    opacity: 0.8 !important;
+    padding-bottom: 4%;
+}
+.tour .slider div .large{
+    font-size: 10rem;
+    margin-top:4%
+}
+.tour .indicator-item{
+    display: none !important;
+}
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 25%;
+}
+.disc{
+    background-color: #e1dfdf;
+    padding: 3%;
+    margin-top: 1%;
+}
+.disc p{
+    color: #313131;
 }
