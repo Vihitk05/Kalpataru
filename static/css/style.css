@@ -60,6 +60,11 @@ nav {
     background-color: white !important;
 }
 
+nav .active {
+    background-color: #0098D2;
+    color: white !important;
+}
+
 nav img {
     width: 200px;
 }
@@ -235,8 +240,37 @@ input[type=tel]:not(.browser-default):focus:not([readonly]){
     box-shadow: 0 1px 0 0 #0098D2 !important;
 }
 
+input[type=text]:not(.browser-default),
+input[type=email]:not(.browser-default),
+input[type=tel]:not(.browser-default){
+    margin-bottom: -19px !important;
+}
+
 input[type=text]:not(.browser-default):focus:not([readonly])+label,
 input[type=email]:not(.browser-default):focus:not([readonly])+label,
 input[type=tel]:not(.browser-default):focus:not([readonly])+label {
     color: #0098D2 !important;
+}
+.modal-content{
+    padding: 0 !important;
+}
+.modal h4{
+    text-align: center;
+    background-color: #0098D2;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    color: white;
+    font-weight: 700;
+}
+.modal h6{
+    text-align: center;
+    font-weight: bold;
+}
+.modal .button-container{
+    margin-top: 0 !important;
+}
+.modal .button-container a{
+    background-color: #0098D2;
+    color: white;
+    margin-bottom: 2%;
 }
