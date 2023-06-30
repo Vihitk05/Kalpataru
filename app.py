@@ -6,7 +6,7 @@ from config import MyClass
 import secrets
 
 # Generate a secure random secret key
-secret_key = secrets.token_hex(8)
+secret_key = secrets.token_hex(16)
 
 # Set the secret key in your Flask application
 
@@ -21,9 +21,6 @@ password = MyClass.password
 data = {}
 name = ''
 passw = ''
-
-
-app = Flask(__name__)
 
 
 @app.route('/')
