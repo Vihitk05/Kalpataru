@@ -65,7 +65,8 @@
                             </div>
                         </div>
                         <div class="button-container">
-                            <a class="waves-effect waves-light btn"><i class="material-icons right">file_download</i>Download
+                            <a type="submit" onclick="downloadPDF('/static/folders/brochure.pdf','my_document.pdf')"
+                               class="waves-effect waves-light btn"><i class="material-icons right">file_download</i>Download
                                 Now</a>
                         </div>
                     </form>
@@ -259,7 +260,9 @@
                             </div>
                         </div>
                         <div class="button-container">
-                            <a class="waves-effect waves-light btn"><i class="material-icons right">send</i>Send Now</a>
+                            <a type="submit" onclick="downloadPDF('/static/folders/gallery.zip','my_document.zip')"
+                               class="waves-effect waves-light btn"><i class="material-icons right">file_download</i>Download
+                                Now</a>
                         </div>
                     </form>
                 </div>
@@ -679,6 +682,17 @@
         $('.slider').slider();
     });
 
+</script>
+<script>
+    function downloadPDF(url, filename) {
+        let link = document.createElement('a');
+        link.href = url;
+        link.target = '_blank';
+        link.download = filename || 'document.pdf';
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+    }
 </script>
 <!-- Compiled and minified CSS -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
