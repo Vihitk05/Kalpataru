@@ -1,0 +1,107 @@
+<html>
+<head>
+    <title>Kolte Patil Alora</title>
+    <link rel="icon" type="image/x-icon" href="/static/images/forms/poplogo.png">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" type="text/css"
+          href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css">
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;600&display=swap");
+
+        body {
+            font-family: "Montserrat", sans-serif;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        .input-field {
+            width: 70%;
+            margin-left: 15%;
+            margin-right: 15%;
+        }
+
+        .button {
+            display: flex;
+            justify-content: center;
+        }
+
+        .button button {
+            background-color: #503c8d;
+            color: white;
+        }
+
+        .button button:hover {
+            background-color: white;
+            color: #503C8D;
+        }
+
+        .login-form {
+            display: flex;
+            justify-content: center;
+            border: 1px solid black;
+            flex-direction: column;
+            margin-top: 10% !important;
+            border-radius: 20px;
+        }
+
+        textarea.materialize-textarea:focus:not([readonly]) + label,
+        .active,
+        textarea.materialize-textarea {
+            color: black !important;
+            outline: black !important;
+            background-color: white !important;
+        }
+
+        textarea:focus {
+            border-bottom: 1px solid black !important;
+            box-shadow: 0 1px 0 0 black !important;
+        }
+
+        @media only screen and (max-width: 1000px) {
+            .login-form {
+                margin-top: 75% !important;
+            }
+        }
+    </style>
+</head>
+
+<body>
+<div class="container login-form">
+
+    <h2>Login</h2>
+    <form action="" method="post">
+        <div class="input-field">
+            <i class="material-icons prefix">person</i>
+            <textarea id="name" name="name" class="materialize-textarea" required></textarea>
+            <label for="name">Name*</label>
+        </div>
+        <div class="input-field">
+            <i class="material-icons prefix">phone</i>
+            <textarea id="password" name="password" class="materialize-textarea" required></textarea>
+            <label for="password">Password*</label>
+        </div>
+        <div class="button">
+            <button type="submit" class="waves-effect waves-light btn"><i class="material-icons right">send</i>SUBMIT
+            </button>
+        </div>
+    </form>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+<script>
+    M.AutoInit();
+</script>
+
+<!-- Compiled and minified CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+<!-- Compiled and minified JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</body>
+
+</html>

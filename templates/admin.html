@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+     <title>Kolte Patil Alora</title>
+    <link rel="icon" type="image/x-icon" href="/static/images/forms/poplogo.png">
+    <link rel="stylesheet" href="/static/css/admin.css" type="text/css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+<div class="container">
+    <form action="/logout" method="post">
+        <div class="left-align left-button">
+            <button type="submit" class="waves-effect waves-light btn" onclick="{{ url_for("logout") }}">LOGOUT
+            </button>
+        </div>
+    </form>
+    <form method="post" action="/admin">
+        <div class="row">
+            <div class="input-field col s6">
+                <i class="material-icons prefix">date_range</i>
+                <input id="start" name="start" type="text" class="datepicker" required>
+                <label for="first_name">Select Start Date</label>
+            </div>
+            <div class="input-field col s6">
+                <i class="material-icons prefix">date_range</i>
+                <input id="end" name="end" class="datepicker" required>
+                <label for="last_name">Select End Date</label>
+            </div>
+        </div>
+        <div class="button-container">
+            <button class="waves-effect waves-light btn" type="submit"><i
+                    class="material-icons right">send</i>SUBMIT
+            </button>
+        </div>
+    </form>
+    <div id="table-data-content">
+        <table class="striped centered" id="myTable">
+            <thead>
+            <th>Name</th>
+            <th>Phone</th>
+            <th>Email</th>
+            <th>Time</th>
+            </thead>
+            <tbody>
+            {% for c_data in data.table_data %}
+                <tr>
+                    <td>{{ c_data.0 }}</td>
+                    <td><a href="tel:{{ c_data.1 }}">{{ c_data.1 }}</a></td>
+                    <td>{{ c_data.2 }}</td>
+                    <td>{{ c_data.3 }}</td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+
+    </div>
+    <div class="button-container">
+        <button class="waves-effect waves-light btn" onclick="exportToExcel()" type="submit">
+            DOWNLOAD
+            <i class="material-icons right">file_download</i>
+        </button>
+    </div>
+
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+<script>
+    M.AutoInit();
+</script>
+
+<script src="https://unpkg.com/xlsx/dist/xlsx.full.min.js"></script>
+<script>
+    function showTable() {
+        document.getElementById("table-data-content").style.visibility = "visible";
+    }
+
+    function exportToExcel() {
+        const table = document.getElementById("myTable");
+        const wb = XLSX.utils.table_to_book(table);
+        XLSX.writeFile(wb, "Customer Data.xlsx");
+    }
+</script>
+<!-- Compiled and minified CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+<!-- Compiled and minified JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</body>
+</html>
