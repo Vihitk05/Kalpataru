@@ -28,6 +28,75 @@ def hello_world():  # put application's code here
     return render_template('index.html')
 
 
+@app.route('/get_details_downloads', methods=['GET', 'POST'])
+def get_details_download():
+    if request.method == 'POST':
+        get_data("download")
+    return render_template('thanks.html')
+
+
+@app.route('/get_details_visit', methods=['GET', 'POST'])
+def get_details_visit():
+    if request.method == 'POST':
+        get_data("visit")
+    return render_template('thanks.html')
+
+
+@app.route('/get_details_floor', methods=['GET', 'POST'])
+def get_details_floor():
+    if request.method == 'POST':
+        get_data("floor")
+    return render_template('thanks.html')
+
+
+@app.route('/get_details_gallery', methods=['GET', 'POST'])
+def get_details_gallery():
+    if request.method == 'POST':
+        get_data("gallery")
+    return render_template('thanks.html')
+
+
+@app.route('/get_details_costing', methods=['GET', 'POST'])
+def get_details_costing():
+    if request.method == 'POST':
+        get_data("costing")
+    return render_template('thanks.html')
+
+
+@app.route('/get_details_instant', methods=['GET', 'POST'])
+def get_details_instant():
+    if request.method == 'POST':
+        get_data("instant")
+    return render_template('thanks.html')
+
+
+@app.route('/get_details_register', methods=['GET', 'POST'])
+def get_details_register():
+    if request.method == 'POST':
+        get_data("register")
+    return render_template('thanks.html')
+
+
+@app.route('/get_details_fixed', methods=['GET', 'POST'])
+def get_details_fixed():
+    if request.method == 'POST':
+        get_data("fixed")
+    return render_template('thanks.html')
+
+
+def get_data(name_type):
+    name = request.form[f"{name_type}-name"]
+    phone = request.form.get(f"{name_type}-phone")
+    email = request.form.get(f"{name_type}-email")
+    time = datetime.datetime.now().strftime("%b %d, %Y")
+    print(time)
+    data = pd.DataFrame({"Name": [name], "Phone": [phone], "Email": [email], "Time": [time]})
+    reader = pd.read_excel("Customer Data.xlsx")
+    writer = pd.ExcelWriter('Customer Data.xlsx', engine='openpyxl', mode='a', if_sheet_exists="overlay")
+    data.to_excel(writer, index=False, header=False, startrow=len(reader) + 1)
+    writer.close()
+
+
 @app.route('/admin', methods=["GET", "POST"])
 def admin():
     global data

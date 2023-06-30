@@ -1,5 +1,19 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;600&display=swap");
 
+@media only screen and (max-width: 1000px) {
+    .thanks {
+        margin-top: 20% !important;
+    }
+
+    .thanks h3 {
+        line-height: 20px !important;
+    }
+
+    .thanks h4 {
+        line-height: 20px !important;
+    }
+}
+
 body {
     font-family: "Montserrat", sans-serif;
 }
@@ -24,24 +38,87 @@ h1 {
     background-color: white;
     color: #503C8D;
 }
-#table-data-content{
+
+#table-data-content {
     height: 300px;
     overflow: auto;
 }
-table{
+
+table {
     overflow: scroll;
 }
 
-.left-button{
+.left-button {
     margin-top: 2%;
 }
 
-.left-button button{
+.left-button button {
     background-color: #503c8d;
     color: white;
 }
 
-.left-button button:hover{
+.left-button button:hover {
     background-color: white;
     color: #503C8D;
+}
+
+.thanks {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 5%;
+    padding-top: 5%;
+}
+
+.thanks .large {
+    font-size: 10rem !important;
+    color: #0098D2 !important;
+    text-align: center !important;
+}
+
+.thanks h2 {
+    font-size: 45px;
+    letter-spacing: 1px;
+    font-weight: bold;
+    text-align: center;
+
+}
+
+.thanks h3 {
+    font-size: 25px;
+    font-weight: 300;
+    color: #0098D2 !important;
+    text-align: center;
+    line-height: 100% !important;
+}
+
+.thanks h4 {
+    font-size: 18px;
+    font-weight: 300;
+    text-align: center;
+    line-height: 0px;
+}
+
+.thanks-button {
+    display: flex;
+    justify-content: center;
+    margin-top: 5%;
+    margin-bottom: 10%;
+}
+
+.thanks-button a {
+    font-size: 180%;
+    background: none !important;
+    box-shadow: none !important;
+    color: #0098D2;
+    border-radius: 20px;
+}
+
+.thanks-button a:hover {
+    background-color: #0098D2 !important;
+    color: white;
+}
+
+.thanks-button i {
+    font-size: 85% !important;
 }

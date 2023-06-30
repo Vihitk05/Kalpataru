@@ -2,47 +2,49 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kolte Patil Alora</title>
     <link rel="icon" type="image/x-icon" href="/static/images/forms/poplogo.png">
-    <link rel="stylesheet" href="{{ url_for('static',filename='css/style.css') }}">
+    <link rel="stylesheet" href="/static/css/admin.css" type="text/css">
+    <link rel="stylesheet" href="/static/css/style.css" type="text/css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body>
-<!-- NAVBAR -->
 <div class="navbar-fixed">
-    <nav class="nav-extended ">
+    <nav>
         <div class="nav-wrapper">
-            <a href="#" class="brand-logo"><img src="/static/images/nav/logo.png" width="150" height="80"></a>
+            <a href="#!" class="brand-logo"><img src="/static/images/logo/logo.svg"></a>
             <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-            <ul id="nav-mobile">
-                <li><a href="/#overview">Overview</a></li>
-                <li><a href="/#configurations">Configuration</a></li>
-                <li><a href="/#amenities">Amenities</a></li>
-                <li><a href="/#location">Location</a></li>
-                <li><a href="/#gallery">Gallery</a></li>
-                <li><a href="/#contact">Contact Us</a></li>
-                <li><a href="tel:9820522244">9820522244</a></li>
+            <ul class="hide-on-med-and-down">
+                <li><a href="#home"><i class="material-icons">home</i></a></li>
+                <li><a href="#price">Price<i class="material-icons">attach_money</i></a></li>
+                <li><a href="#site">Site & Floor Plan<i class="material-icons">business</i></a></li>
+                <li><a href="#amenities">Amenities<i class="material-icons">wifi</i></a></li>
+                <li><a href="#gallery">Gallery<i class="material-icons">photo_library</i></a></li>
+                <li><a href="#location">Location<i class="material-icons">location_on</i></a></li>
+                <li><a href="#tour">Virtual Site Visit<i class="material-icons">videocam</i></a></li>
+                <li><a href="#modal1" class="modal-trigger">Brochure<i class="material-icons">file_download</i></a>
+                </li>
             </ul>
-            <a href=""><img src="/static/images/nav/buliders.png" alt="" width="150" height="80" id="builder"></a>
         </div>
     </nav>
 </div>
 <ul class="sidenav" id="mobile-demo">
-    <li><a href="/#overview-mob">Overview</a></li>
-    <li><a href="/#configurations">Configuration</a></li>
-    <li><a href="/#amenities">Amenities</a></li>
-    <li><a href="/#location">Location</a></li>
-    <li><a href="/#gallery">Gallery</a></li>
-    <li><a href="/#contact">Contact Us</a></li>
-    <li style="text-align: justify;"><a href="tel:9820522244">9820522244</a></li>
+    <li><a href="#home">Home<i class="material-icons">home</i></a></li>
+    <li><a href="#price">Price<i class="material-icons">attach_money</i></a></li>
+    <li><a href="#site">Site & Floor Plan<i class="material-icons">business</i></a></li>
+    <li><a href="#amenities">Amenities<i class="material-icons">wifi</i></a></li>
+    <li><a href="#gallery">Gallery<i class="material-icons">photo_library</i></a></li>
+    <li><a href="#location">Location<i class="material-icons">location_on</i></a></li>
+    <li><a href="#tour">Virtual Site Visit<i class="material-icons">videocam</i></a></li>
+    <li><a href="#modal1" class="modal-trigger">Download Brochure<i class="material-icons">file_download</i></a>
+    </li>
 </ul>
 
 <div class="thanks container">
     <i class="large material-icons">check_circle</i>
     <h2>You're all set!</h2>
-    <h3>Greetings From Kolte Patil Alora</h3>
+    <h3>Greetings From Kalpataru Radiance</h3>
     <h4>Thank you for expressing interest on our website.</h4>
     <h4>Our expert will get in touch with you shortly.</h4>
     <div class="thanks-button">
@@ -52,25 +54,16 @@
         </a>
     </div>
 </div>
-<footer>
-    <div class="footer-data container">
-        <p>The project has been registered via MAHARERA registration no. A51800005310 and is available on the
-            website http://maharera.mahaonline.gov.in under registered projects.</p>
-        <p>Disclaimer: All art renderings, illustrations, photographs and pictures contained in this advertisement
-            are an artist's impression only and the same should not be considered to be final image view of the
-            project. Since the project is under evaluation there is a possibility that there may be certain changes
-            in the project. Every interested purchaser should take note of this express representation. Kindly visit
-            our website for complete disclosures. *T&C apply.</p>
-        <p>Copyright © 2023 All rights reserved.</p>
-    </div>
-</footer>
-
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
 <script>
     M.AutoInit();
+    $(document).ready(function () {
+        $('.slider').slider();
+    });
+
 </script>
 <!-- Compiled and minified CSS -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">

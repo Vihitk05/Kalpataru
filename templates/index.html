@@ -49,25 +49,25 @@
                 <div class="content1">
                     <img src="/static/images/logo/logo.svg" class="center">
                     <h6>Register Here and Avail the <span style="color: red">Best Offers!</span></h6>
-                    <form action="" method="post" class="container">
+                    <form action="{{ url_for('get_details_download') }}" method="post" class="container" >
                         <div class="row">
                             <div class="input-field col s12">
-                                <input id="name" type="text" class="validate">
+                                <input name="download-name" id="name" type="text" class="validate" required>
                                 <label for="name">Name</label>
                             </div>
                             <div class="input-field col s12">
-                                <input id="email" type="email" class="validate">
+                                <input name="download-email" id="email" type="email" class="validate" required>
                                 <label for="email">Email</label>
                             </div>
                             <div class="input-field col s12">
-                                <input id="phone" type="tel" class="validate">
+                                <input name="download-phone" id="phone" type="tel" class="validate" required>
                                 <label for="phone">Phone</label>
                             </div>
                         </div>
                         <div class="button-container">
-                            <a type="submit" onclick="downloadPDF('/static/folders/brochure.pdf','my_document.pdf')"
+                            <button type="submit" onclick="downloadPDF('/static/folders/brochure.pdf','my_document.pdf')"
                                class="waves-effect waves-light btn"><i class="material-icons right">file_download</i>Download
-                                Now</a>
+                                Now</button>
                         </div>
                     </form>
                 </div>
@@ -83,23 +83,23 @@
                 <div class="content1">
                     <img src="/static/images/logo/logo.svg" class="center">
                     <h6>Register Here and Avail the <span style="color: red">Best Offers!</span></h6>
-                    <form action="" method="post" class="container">
+                    <form action="{{ url_for('get_details_register') }}" method="post" class="container">
                         <div class="row">
                             <div class="input-field col s12">
-                                <input id="name" type="text" class="validate">
+                                <input id="name" type="text" class="validate" name="register-name" required>
                                 <label for="name">Name</label>
                             </div>
                             <div class="input-field col s12">
-                                <input id="email" type="email" class="validate">
+                                <input id="email" type="email" class="validate" name="register-email" required>
                                 <label for="email">Email</label>
                             </div>
                             <div class="input-field col s12">
-                                <input id="phone" type="tel" class="validate">
+                                <input id="phone" type="tel" class="validate" name="register-phone" required>
                                 <label for="phone">Phone</label>
                             </div>
                         </div>
                         <div class="button-container">
-                            <a class="waves-effect waves-light btn"><i class="material-icons right">send</i>Register Now</a>
+                            <button type="submit" class="waves-effect waves-light btn"><i class="material-icons right">send</i>Register Now</button>
                         </div>
                     </form>
                 </div>
@@ -115,24 +115,24 @@
                 <div class="content1">
                     <img src="/static/images/logo/logo.svg" class="center">
                     <h6>Register Here and Avail the <span style="color: red">Best Offers!</span></h6>
-                    <form action="" method="post" class="container">
+                    <form action="{{ url_for('get_details_instant') }}" method="post" class="container">
                         <div class="row">
                             <div class="input-field col s12">
-                                <input id="name" type="text" class="validate">
+                                <input id="name" type="text" class="validate" name="instant-name" required>
                                 <label for="name">Name</label>
                             </div>
                             <div class="input-field col s12">
-                                <input id="email" type="email" class="validate">
+                                <input id="email" type="email" class="validate" name="instant-email" required>
                                 <label for="email">Email</label>
                             </div>
                             <div class="input-field col s12">
-                                <input id="phone" type="tel" class="validate">
+                                <input id="phone" type="tel" class="validate" name="instant-phone" required>
                                 <label for="phone">Phone</label>
                             </div>
                         </div>
                         <div class="button-container">
-                            <a class="waves-effect waves-light btn"><i class="material-icons left">phone</i>Request Call
-                                Now</a>
+                            <button type="submit" class="waves-effect waves-light btn"><i class="material-icons left">phone</i>Request Call
+                                Now</button>
                         </div>
                     </form>
                 </div>
@@ -148,23 +148,23 @@
                 <div class="content1">
                     <img src="/static/images/logo/logo.svg" class="center">
                     <h6>Register Here and Avail the <span style="color: red">Best Offers!</span></h6>
-                    <form action="" method="post" class="container">
+                    <form action="{{ url_for('get_details_costing') }}" method="post" class="container">
                         <div class="row">
                             <div class="input-field col s12">
-                                <input id="name" type="text" class="validate">
+                                <input id="name" type="text" class="validate" name="costing-name" required>
                                 <label for="name">Name</label>
                             </div>
                             <div class="input-field col s12">
-                                <input id="email" type="email" class="validate">
+                                <input id="email" type="email" class="validate" name="costing-email" required>
                                 <label for="email">Email</label>
                             </div>
                             <div class="input-field col s12">
-                                <input id="phone" type="tel" class="validate">
+                                <input id="phone" type="tel" class="validate" name="costing-phone" required>
                                 <label for="phone">Phone</label>
                             </div>
                         </div>
                         <div class="button-container">
-                            <a class="waves-effect waves-light btn"><i class="material-icons right">send</i>Send Now</a>
+                            <button type="submit" class="waves-effect waves-light btn"><i class="material-icons right">send</i>Send Now</button>
                         </div>
                     </form>
                 </div>
@@ -180,55 +180,23 @@
                 <div class="content1">
                     <img src="/static/images/logo/logo.svg" class="center">
                     <h6>Register Here and Avail the <span style="color: red">Best Offers!</span></h6>
-                    <form action="" method="post" class="container">
+                    <form action="{{ url_for('get_details_floor') }}" method="post" class="container">
                         <div class="row">
                             <div class="input-field col s12">
-                                <input id="name" type="text" class="validate">
+                                <input id="name" type="text" class="validate" name="floor-name" required>
                                 <label for="name">Name</label>
                             </div>
                             <div class="input-field col s12">
-                                <input id="email" type="email" class="validate">
+                                <input id="email" type="email" class="validate" name="floor-email" required>
                                 <label for="email">Email</label>
                             </div>
                             <div class="input-field col s12">
-                                <input id="phone" type="tel" class="validate">
+                                <input id="phone" type="tel" class="validate" name="floor-phone" required>
                                 <label for="phone">Phone</label>
                             </div>
                         </div>
                         <div class="button-container">
-                            <a class="waves-effect waves-light btn"><i class="material-icons right">send</i>Send Now</a>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Modal - Amenities -->
-    <div id="modal6" class="modal">
-        <div class="modal-content">
-            <h4>Download Amenities</h4>
-            <div class="contents">
-                <div class="content1">
-                    <img src="/static/images/logo/logo.svg" class="center">
-                    <h6>Register Here and Avail the <span style="color: red">Best Offers!</span></h6>
-                    <form action="" method="post" class="container">
-                        <div class="row">
-                            <div class="input-field col s12">
-                                <input id="name" type="text" class="validate">
-                                <label for="name">Name</label>
-                            </div>
-                            <div class="input-field col s12">
-                                <input id="email" type="email" class="validate">
-                                <label for="email">Email</label>
-                            </div>
-                            <div class="input-field col s12">
-                                <input id="phone" type="tel" class="validate">
-                                <label for="phone">Phone</label>
-                            </div>
-                        </div>
-                        <div class="button-container">
-                            <a class="waves-effect waves-light btn"><i class="material-icons right">send</i>Send Now</a>
+                            <button type="submit" class="waves-effect waves-light btn"><i class="material-icons right">send</i>Send Now</button>
                         </div>
                     </form>
                 </div>
@@ -244,58 +212,25 @@
                 <div class="content1">
                     <img src="/static/images/logo/logo.svg" class="center">
                     <h6>Register Here and Avail the <span style="color: red">Best Offers!</span></h6>
-                    <form action="" method="post" class="container">
+                    <form action="{{ url_for('get_details_gallery') }}" method="post" class="container">
                         <div class="row">
                             <div class="input-field col s12">
-                                <input id="name" type="text" class="validate">
+                                <input id="name" type="text" class="validate" name="gallery-name" required>
                                 <label for="name">Name</label>
                             </div>
                             <div class="input-field col s12">
-                                <input id="email" type="email" class="validate">
+                                <input id="email" type="email" class="validate" name="gallery-email" required>
                                 <label for="email">Email</label>
                             </div>
                             <div class="input-field col s12">
-                                <input id="phone" type="tel" class="validate">
+                                <input id="phone" type="tel" class="validate" name="gallery-phone" required>
                                 <label for="phone">Phone</label>
                             </div>
                         </div>
                         <div class="button-container">
-                            <a type="submit" onclick="downloadPDF('/static/folders/gallery.zip','my_document.zip')"
+                            <button type="submit" onclick="downloadPDF('/static/folders/gallery.zip','my_document.zip')"
                                class="waves-effect waves-light btn"><i class="material-icons right">file_download</i>Download
-                                Now</a>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Modal - Location Map -->
-    <div id="modal8" class="modal">
-        <div class="modal-content">
-            <h4>Download Location Map</h4>
-            <div class="contents">
-                <div class="content1">
-                    <img src="/static/images/logo/logo.svg" class="center">
-                    <h6>Register Here and Avail the <span style="color: red">Best Offers!</span></h6>
-                    <form action="" method="post" class="container">
-                        <div class="row">
-                            <div class="input-field col s12">
-                                <input id="name" type="text" class="validate">
-                                <label for="name">Name</label>
-                            </div>
-                            <div class="input-field col s12">
-                                <input id="email" type="email" class="validate">
-                                <label for="email">Email</label>
-                            </div>
-                            <div class="input-field col s12">
-                                <input id="phone" type="tel" class="validate">
-                                <label for="phone">Phone</label>
-                            </div>
-                        </div>
-                        <div class="button-container">
-                            <a class="waves-effect waves-light btn"><i class="material-icons right">file_download</i>Download
-                                Now</a>
+                                Now</button>
                         </div>
                     </form>
                 </div>
@@ -311,24 +246,24 @@
                 <div class="content1">
                     <img src="/static/images/logo/logo.svg" class="center">
                     <h6>Register Here and Avail the <span style="color: red">Best Offers!</span></h6>
-                    <form action="" method="post" class="container">
+                    <form action="{{ url_for('get_details_visit') }}" method="post" class="container">
                         <div class="row">
                             <div class="input-field col s12">
-                                <input id="name" type="text" class="validate">
+                                <input id="name" name="visit-name" type="text" class="validate" required>
                                 <label for="name">Name</label>
                             </div>
                             <div class="input-field col s12">
-                                <input id="email" type="email" class="validate">
+                                <input id="email" type="email" name="visit-email" class="validate" required>
                                 <label for="email">Email</label>
                             </div>
                             <div class="input-field col s12">
-                                <input id="phone" type="tel" class="validate">
+                                <input id="phone" type="tel" class="validate" name="visit-phone" required>
                                 <label for="phone">Phone</label>
                             </div>
                         </div>
                         <div class="button-container">
-                            <a class="waves-effect waves-light btn"><i class="material-icons right">play_arrow</i>Start
-                                Tour</a>
+                            <button type="submit" class="waves-effect waves-light btn"><i class="material-icons right">play_arrow</i>Start
+                                Tour</button>
                         </div>
                     </form>
                 </div>
@@ -597,7 +532,7 @@
     <div class="tour scrollspy" id="tour">
         <h2>Virtual Tour Request</h2>
         <div class="slider">
-            <ul class="slides">
+            <ul class="slides hoverable" >
                 <li>
                     <a href="#modal9" class="modal-trigger">
                         <img src="/static/images/banner/2.webp" width="100%"> <!-- random image -->
@@ -647,27 +582,27 @@
     </div>
 
     <div class="button-container">
-        <a href="#modal3" class="waves-effect waves-light btn-small modal-trigger"><i
-                class="material-icons left">phone</i>INSTANT CALL BACK</a>
+        <button href="#modal3" class="waves-effect waves-light btn-small modal-trigger"><i
+                class="material-icons left">phone</i>INSTANT CALL BACK</button>
     </div>
     <h6>Get The Best Quote</h6>
-    <form action="" method="post">
+    <form action="{{ url_for('get_details_fixed') }}" method="post">
         <div class="row">
             <div class="input-field col s12">
-                <input id="name" type="text" class="validate">
+                <input id="name" type="text" class="validate" name="fixed-name" required>
                 <label for="name">Name</label>
             </div>
             <div class="input-field col s12">
-                <input id="email" type="email" class="validate">
+                <input id="email" type="email" class="validate" name="fixed-email" required>
                 <label for="email">Email</label>
             </div>
             <div class="input-field col s12">
-                <input id="phone" type="tel" class="validate">
+                <input id="phone" type="tel" class="validate" name="fixed-phone" required>
                 <label for="phone">Phone</label>
             </div>
         </div>
         <div class="button-container">
-            <a class="waves-effect waves-light btn"><i class="material-icons right">send</i>SUBMIT</a>
+            <button type="submit" class="waves-effect waves-light btn"><i class="material-icons right">send</i>SUBMIT</button>
         </div>
     </form>
 

@@ -34,6 +34,12 @@
     .amenities .indicator-item {
         display: none !important;
     }
+    .gallery-box{
+        display: block !important;
+    }
+    .gallery-box div{
+        margin-bottom: 2% !important;
+    }
 }
 
 body {
@@ -115,7 +121,7 @@ nav ul li i {
     text-align: left
 }
 
-.intro a, .price a, .site a, .amenities a, .gallery a, .map2 a, .container2 .button-container a {
+.intro a, .price a, .site a, .amenities a, .gallery a, .map2 a, .container2 .button-container button {
     background-color: #0098D2 !important;
 }
 
@@ -269,7 +275,7 @@ input[type=tel]:not(.browser-default):focus:not([readonly])+label {
 .modal .button-container{
     margin-top: 0 !important;
 }
-.modal .button-container a{
+.modal .button-container button{
     background-color: #0098D2;
     color: white;
     margin-bottom: 2%;
