@@ -9,6 +9,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 </head>
 <body>
+<div class="preloader-background">
+	<div class="preloader-wrapper big active">
+		<div class="spinner-layer spinner-blue-only">
+			<div class="circle-clipper left">
+				<div class="circle"></div>
+			</div>
+			<div class="gap-patch">
+				<div class="circle"></div>
+			</div>
+			<div class="circle-clipper right">
+				<div class="circle"></div>
+			</div>
+		</div>
+	</div>
+</div>
 <div class="container1">
     <div class="navbar-fixed">
         <nav style="width: 80%;">
@@ -628,6 +643,15 @@
         link.click();
         document.body.removeChild(link);
     }
+</script>
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+	$('.preloader-background').delay(1700).fadeOut('slow');
+
+	$('.preloader-wrapper')
+		.delay(1700)
+		.fadeOut();
+});
 </script>
 <!-- Compiled and minified CSS -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
